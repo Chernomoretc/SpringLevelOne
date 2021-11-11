@@ -13,6 +13,7 @@ public class ProductRepository {
     @PostConstruct
     public void init() {
         products = new ArrayList<>();
+
         products.add(new Product(1L, "apple", 10));
         products.add(new Product(2L, "potato", 5));
         products.add(new Product(3L, "banana", 7));
