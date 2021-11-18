@@ -16,9 +16,9 @@ private ProductRepository productRepository;
         this.productRepository = productRepository;
     }
 
-    @GetMapping("/show_products")
-    public String showProducts(Model model) {
-        model.addAttribute("products",productRepository.getProducts());
-        return "products_page";
-    }
+//    @GetMapping("/show_products")
+//    public String showProducts(Model model) {
+//        model.addAttribute("products",productRepository.getProducts());
+//        return "products_page";
+//    }
 }
