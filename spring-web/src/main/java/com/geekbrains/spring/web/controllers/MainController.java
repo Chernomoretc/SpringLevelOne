@@ -1,24 +1,39 @@
 package com.geekbrains.spring.web.controllers;
 
 
-import com.geekbrains.spring.web.repositories.ProductRepository;
-import org.springframework.stereotype.Controller;
+import com.geekbrains.spring.web.data.Product;
+import com.geekbrains.spring.web.services.ProductsService;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 
-@Controller
+@RestController
 public class MainController {
 
-private ProductRepository productRepository;
+    private ProductsService productsService;
 
-    public MainController(ProductRepository productRepository) {
-        this.productRepository = productRepository;
+    public MainController(ProductsService productsService) {
+        this.productsService = productsService;
     }
 
-//    @GetMapping("/show_products")
-//    public String showProducts(Model model) {
-//        model.addAttribute("products",productRepository.getProducts());
-//        return "products_page";
+
+//    @GetMapping("/products")
+//    public List<Product> showProducts(Model model) {
+//        return productsService.getAllProducts();
 //    }
+//
+//    @GetMapping("/products/delete")
+//    public void deleteById(@RequestParam Long productId) {
+//        productsService.deleteById(productId);
+//    }
+//
+//    @GetMapping("/products/change_cost")
+//    public void changeCost(@RequestParam Long productId, @RequestParam Integer delta) {
+//        productsService.changeCost(productId, delta);
+//    }
+
 }

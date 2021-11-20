@@ -1,5 +1,4 @@
 server:
-  port: 8080
+  port: 8189
   servlet:
-    context-path: /spring
-
+    context-path: /app

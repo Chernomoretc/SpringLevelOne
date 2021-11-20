@@ -3,9 +3,9 @@ package com.geekbrains.spring.web.data;
 public class Product {
     private Long id;
     private String title;
-    private int cost;
+    private Integer cost;
 
-    public Product(Long id, String title, int cost) {
+    public Product(Long id, String title, Integer cost) {
         this.id = id;
         this.title = title;
         this.cost = cost;
@@ -19,7 +19,7 @@ public class Product {
         return title;
     }
 
-    public int getCoast() {
+    public Integer getCost() {
         return cost;
     }
 
@@ -27,6 +27,10 @@ public class Product {
     public String toString() {
         return "id=" + id +
                 " title=" + title +
-                " cost=" + cost + "rub" ;
+                " cost=" + cost + "rub";
+    }
+
+    public void changeCostProduct(Integer delta) {
+        cost = cost + delta;
     }
 }
