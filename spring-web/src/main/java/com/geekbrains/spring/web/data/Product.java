@@ -30,6 +30,7 @@ public class Product {
                 " cost=" + cost + "rub";
     }
 
+
     public void changeCostProduct(Integer delta) {
         cost = cost + delta;
     }

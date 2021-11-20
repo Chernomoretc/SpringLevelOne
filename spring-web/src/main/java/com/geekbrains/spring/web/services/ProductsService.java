@@ -21,7 +21,7 @@ public class ProductsService {
 
     public void changeCost(Long id, Integer delta) {
 
-      //  productRepository.findById(id).changeCostProduct(delta);
+        productRepository.findById(id).changeCostProduct(delta);
     }
 
     public void deleteById(Long id) {
