@@ -21,7 +21,7 @@ angular.module('app', []).controller('indexController', function ($scope, $http)
     }
 
     $scope.changeCost = function (productId,cost, delta) {
-  //  if(cost==1 && delta==-1 ){delta=0}
+    if(cost==1 && delta==-1 ){delta=0}
 
         $http({
             url: contextPath + '/products/change_cost',

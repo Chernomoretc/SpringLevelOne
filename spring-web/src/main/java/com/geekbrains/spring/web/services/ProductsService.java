@@ -20,8 +20,8 @@ public class ProductsService {
     }
 
     public void changeCost(Long id, Integer delta) {
-
-      //  productRepository.findById(id).changeCostProduct(delta);
+        System.out.println(delta);
+        productRepository.changeCostProduct(id, delta);
     }
 
     public void deleteById(Long id) {

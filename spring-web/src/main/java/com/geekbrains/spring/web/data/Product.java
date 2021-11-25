@@ -2,22 +2,24 @@ package com.geekbrains.spring.web.data;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name = "products")
+//@Entity (name = "product")
+//@Table(name = "products")
 public class Product {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @Column(name = "id")
     private Long id;
-    @Column(name = "title")
+
+//    @Column(name = "title")
     private String title;
-    @Column(name = "cost")
-    private Integer cost;
+
+//    @Column(name = "cost")
+    private Long cost;
 
     public Product() {
     }
 
-    public Product(Long id, String title, Integer cost) {
+    public Product(Long id, String title, Long cost) {
         this.id = id;
         this.title = title;
         this.cost = cost;
@@ -31,7 +33,7 @@ public class Product {
         this.title = title;
     }
 
-    public void setCost(Integer cost) {
+    public void setCost(Long cost) {
         this.cost = cost;
     }
 
@@ -43,7 +45,7 @@ public class Product {
         return title;
     }
 
-    public Integer getCost() {
+    public Long getCost() {
         return cost;
     }
 
@@ -55,7 +57,4 @@ public class Product {
                 " cost = " + cost + "rub";
     }
 
-    public void changeCostProduct(Integer delta) {
-        cost = cost + delta;
-    }
 }

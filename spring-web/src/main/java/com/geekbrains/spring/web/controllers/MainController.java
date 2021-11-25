@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+
 import java.util.List;
 
 
@@ -21,19 +22,20 @@ public class MainController {
     }
 
 
-//    @GetMapping("/products")
-//    public List<Product> showProducts(Model model) {
-//        return productsService.getAllProducts();
-//    }
-//
-//    @GetMapping("/products/delete")
-//    public void deleteById(@RequestParam Long productId) {
-//        productsService.deleteById(productId);
-//    }
-//
-//    @GetMapping("/products/change_cost")
-//    public void changeCost(@RequestParam Long productId, @RequestParam Integer delta) {
-//        productsService.changeCost(productId, delta);
-//    }
+    @GetMapping("/products")
+    public List<Product> showProducts(Model model) {
+        return productsService.getAllProducts();
+    }
+
+    @GetMapping("/products/delete")
+    public void deleteById(@RequestParam Long productId) {
+        productsService.deleteById(productId);
+    }
+
+    @GetMapping("/products/change_cost")
+    public void changeCost(@RequestParam Long productId,@RequestParam Integer delta) {
+        productsService.changeCost(productId, delta);
+
+    }
 
 }

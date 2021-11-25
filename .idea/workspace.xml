@@ -22,10 +22,17 @@
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_5_Final.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_2_Final.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_1_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/repositories/SessionFactoryUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-web/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-web/src/main/resources/import.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/SpringWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/SpringWebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/controllers/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/data/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/data/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/repositories/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/services/ProductsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/services/ProductsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-web/src/main/resources/static/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/src/main/resources/static/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +76,7 @@
       <module name="spring-web" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.geekbrains.spring.web.*" />
+          <option name="PATTERN" value="com.geekbrains.spring.web.repositories.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
