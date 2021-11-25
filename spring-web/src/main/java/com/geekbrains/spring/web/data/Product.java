@@ -2,18 +2,18 @@ package com.geekbrains.spring.web.data;
 
 import javax.persistence.*;
 
-//@Entity (name = "product")
-//@Table(name = "products")
+@Entity (name = "product")
+@Table(name = "products")
 public class Product {
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(name = "id")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
-//    @Column(name = "title")
+    @Column(name = "title")
     private String title;
 
-//    @Column(name = "cost")
+    @Column(name = "cost")
     private Long cost;
 
     public Product() {
