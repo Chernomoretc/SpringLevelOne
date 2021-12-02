@@ -14,6 +14,8 @@
         <property name="current_session_context_class">thread</property>
         <property name="hibernate.hbm2ddl.auto">create-drop</property>
 
-        <mapping class="com.geekbrains.spring.web.data.Product"/>
+        <mapping class="com.geekbrains.spring.web.data.Customer"/>
+        <mapping class="com.geekbrains.spring.web.data.Purchase"/>
+
     </session-factory>
 </hibernate-configuration>
