@@ -1,7 +1,6 @@
 package com.geekbrains.spring.web.data;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity(name = "customer")
@@ -10,27 +9,23 @@ import java.util.List;
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "customer_id")
+    @Column(name = "id")
     private long id;
 
     @Column(name = "name")
     private String name;
 
-//    @OneToMany
-//    @JoinColumn(name = "purchases")
-//    private List<Purchase> purchases;
+    @OneToMany (mappedBy = "customer")
+    private List<Purchase> purchases;
 
     public Customer() {
     }
 
     public List<Purchase> getPurchases() {
-        List<Purchase> purchases = new ArrayList<>();
         return purchases;
     }
 
-//    public void setPurchases(List<Purchase> purchases) {
-//        this.purchases = purchases;
-//    }
+
 
 
     public long getId() {
@@ -51,7 +46,6 @@ public class Customer {
 
     @Override
     public String toString() {
-        return String.format("Customer [id = %d, name = %s]", id, name);
-
+        return String.format("Customer [id = %d, name = %s, purchases = %]", id, name,purchases.size());
     }
 }
