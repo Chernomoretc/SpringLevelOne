@@ -16,6 +16,7 @@
 
         <mapping class="com.geekbrains.spring.web.data.Customer"/>
         <mapping class="com.geekbrains.spring.web.data.Purchase"/>
+        <mapping class="com.geekbrains.spring.web.data.Product"/>
 
     </session-factory>
 </hibernate-configuration>

@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2132a2cd-8765-458c-82a9-ef51bd8f854a" name="Default Changelist" comment="" />
+    <list default="true" id="2132a2cd-8765-458c-82a9-ef51bd8f854a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/dao/CustomerDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/SpringWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/SpringWebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/dao/PurchaseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/dao/PurchaseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/data/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/data/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/data/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/data/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/data/Purchase.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/data/Purchase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/dao/ProductDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/repositories/SessionFactoryUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/SessionFactoryUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/services/ProductsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-web/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-web/src/main/resources/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/src/main/resources/import.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +56,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Stas\Desktop\repo\SpringLevel1\spring-web\src\main\resources" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.geekbrains.spring.web" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="SpringWebApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -47,7 +66,7 @@
       <module name="spring-web" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.geekbrains.spring.web.repositories.*" />
+          <option name="PATTERN" value="com.geekbrains.spring.web.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

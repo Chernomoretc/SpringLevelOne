@@ -1,63 +1,59 @@
 package com.geekbrains.spring.web.dao;
 
 import com.geekbrains.spring.web.data.Purchase;
-import com.geekbrains.spring.web.repositories.SessionFactoryUtils;
+import com.geekbrains.spring.web.SessionFactoryUtils;
 import org.hibernate.Session;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-//@Component
+
+@Component
 public class PurchaseDao {
-    private SessionFactoryUtils sessionFactoryUtils;
+    private static SessionFactoryUtils sessionFactoryUtils;
 
     public PurchaseDao(SessionFactoryUtils sessionFactoryUtils) {
+
         this.sessionFactoryUtils = sessionFactoryUtils;
     }
 
-    public Purchase findById(Long id) {
-        try (Session session = sessionFactoryUtils.getSession()) {
-            session.beginTransaction();
-            Purchase purchase = session.get(Purchase.class, id);
-            session.getTransaction().commit();
-            return purchase;
-        }
-    }
-
-    public List<Purchase> findAll() {
-        try (Session session = sessionFactoryUtils.getSession()) {
-            session.beginTransaction();
-            List<Purchase> purchases = (List<Purchase>)session.createQuery("from purchases", List.class);
-            session.getTransaction().commit();
-            return purchases;
-        }
-    }
-
-//    public Product saveOrUpdate(Product product) {
-//        try (Session session = sessionFactory.getCurrentSession()) {
+//    public static Purchase findById(Long id) {
+//        try (Session session = sessionFactoryUtils.getSession()) {
 //            session.beginTransaction();
-//            session.saveOrUpdate(product);
+//            Purchase purchase = session.get(Purchase.class, id);
 //            session.getTransaction().commit();
-//            return product;
+//            return purchase;
 //        }
 //    }
-//
-//    public void delete(Long id) {
-//        try (Session session = sessionFactory.getCurrentSession()) {
+//    public static List<Purchase> findByCustomerId(long id) {
+//        try (Session session = sessionFactoryUtils.getSession()) {
 //            session.beginTransaction();
-//            session.createQuery("delete from Product p where p.id = :id")
+//            List<Purchase> purchases = session
+//                    .createQuery("select p from purchase p where customer_id = :id ")
 //                    .setParameter("id", id)
-//                    .executeUpdate();
+//                    .getResultList();
 //            session.getTransaction().commit();
+//            return purchases;
 //        }
 //    }
 //
-//    public void delete(Product product) {
-//        try (Session session = sessionFactory.getCurrentSession()) {
+//    public static List<Purchase> findAll() {
+//        try (Session session = sessionFactoryUtils.getSession()) {
 //            session.beginTransaction();
-//            session.delete(product);
+//            List<Purchase> purchaseList = session.createQuery("select p from purchase p").getResultList();
 //            session.getTransaction().commit();
+//            return purchaseList;
 //        }
 //    }
+
+    public static void delete(Long id) {
+        try (Session session = sessionFactoryUtils.getSession()) {
+            session.beginTransaction();
+            session.createQuery("delete from purchase p where id = :id")
+                    .setParameter("id", id)
+                    .executeUpdate();
+            session.getTransaction().commit();
+        }
+    }
 
 
 }

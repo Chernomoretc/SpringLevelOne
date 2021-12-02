@@ -1,8 +1,9 @@
 package com.geekbrains.spring.web.data;
 
 import javax.persistence.*;
+import java.util.List;
 
-@Entity (name = "product")
+@Entity(name = "product")
 @Table(name = "products")
 public class Product {
     @Id
@@ -16,13 +17,11 @@ public class Product {
     @Column(name = "cost")
     private Long cost;
 
-    @ManyToOne
-    @JoinColumn(name = "customer_id")
-    private Customer customer;
+    @OneToMany(mappedBy = "product")
+    private List<Purchase> purchases;
 
     public Product() {
     }
-
 
 
     public Product(Long id, String title, Long cost) {

@@ -1,4 +1,4 @@
-package com.geekbrains.spring.web.repositories;
+package com.geekbrains.spring.web;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -11,16 +11,12 @@ import javax.annotation.PostConstruct;
 public class SessionFactoryUtils {
     private SessionFactory factory;
 
-<<<<<<< HEAD
-
-=======
-    @PostConstruct
->>>>>>> 24d85dc726625ee1821861989bd2df74f2727c96
-    public void init() {
-        factory = new Configuration()
-                .configure("hibernate.cfg.xml")
-                .buildSessionFactory();
-    }
+//@PostConstruct
+//    public void init() {
+//        factory = new Configuration()
+//                .configure("hibernate.cfg.xml")
+//                .buildSessionFactory();
+//    }
 
     public Session getSession() {
         return factory.getCurrentSession();
