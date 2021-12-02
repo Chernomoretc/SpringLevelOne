@@ -17,11 +17,11 @@ public class SpringWebApplication {
 
     public static void main(String[] args) {
         // SpringApplication.run(SpringWebApplication.class, args);
-//        ApplicationContext context = new AnnotationConfigApplicationContext("com.geekbrains.spring.web");
-//        PurchaseDao purchaseDao = context.getBean(PurchaseDao.class);
+        ApplicationContext context = new AnnotationConfigApplicationContext("com.geekbrains.spring.web");
+        PurchaseDao purchaseDao = context.getBean(PurchaseDao.class);
         //Поиск покупок по id покупателя
-//        List<Purchase> purchases = purchaseDao.findByCustomerId(2l);
-//        purchases.forEach(purchase -> System.out.println(purchase.toString()));
+        List<Purchase> purchases = purchaseDao.findByCustomerId(2l);
+        purchases.forEach(purchase -> System.out.println(purchase.toString()));
     }
 //http://localhost:8189/app/index.html
 }

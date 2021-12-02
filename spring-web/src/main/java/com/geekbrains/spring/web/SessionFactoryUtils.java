@@ -11,12 +11,12 @@ import javax.annotation.PostConstruct;
 public class SessionFactoryUtils {
     private SessionFactory factory;
 
-//@PostConstruct
-//    public void init() {
-//        factory = new Configuration()
-//                .configure("hibernate.cfg.xml")
-//                .buildSessionFactory();
-//    }
+@PostConstruct
+    public void init() {
+        factory = new Configuration()
+                .configure("hibernate.cfg.xml")
+                .buildSessionFactory();
+    }
 
     public Session getSession() {
         return factory.getCurrentSession();
