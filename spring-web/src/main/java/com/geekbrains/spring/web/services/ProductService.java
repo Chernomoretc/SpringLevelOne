@@ -16,32 +16,32 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
-//    public List<Product> findALL() {
-//        return productRepository.findAll();
-//    }
-//
-//
-//    public void deleteById(Long id) {
-//        productRepository.deleteById(id);
-//    }
-//
-//    @Transactional
-//    public void changeCost(Long productId, Integer delta) {
-//        Product product = productRepository.findById(productId)
-//                .orElseThrow(() -> new ResourceNotFoundException("Unable to change product's cost. Product not found, id: " + productId));
-//        product.setCost(product.getCost() + delta);
-//    }
-//
-//    public List<Product> findAllByCostMin(Long min) {
-//        return productRepository.findAllByCostMin(min);
-//
-//    }
-//
-//    public List<Product> findAllByCostMax(Long max) {
-//        return productRepository.findAllByCostMax(max);
-//    }
-//
-//    public List<Product> findAllByCostMinMax(Long min, Long max) {
-//        return productRepository.findAllByCostMinMax(min, max);
-//    }
+    public List<Product> findALL() {
+        return productRepository.findAll();
+    }
+
+
+    public void deleteById(Long id) {
+        productRepository.deleteById(id);
+    }
+
+    @Transactional
+    public void changeCost(Long productId, Integer delta) {
+        Product product = productRepository.findById(productId)
+                .orElseThrow(() -> new ResourceNotFoundException("Unable to change product's cost. Product not found, id: " + productId));
+        product.setCost(product.getCost() + delta);
+    }
+
+    public List<Product> findAllByCostMin(Long min) {
+        return productRepository.findAllByCostMin(min);
+
+    }
+
+    public List<Product> findAllByCostMax(Long max) {
+        return productRepository.findAllByCostMax(max);
+    }
+
+    public List<Product> findAllByCostMinMax(Long min, Long max) {
+        return productRepository.findAllByCostMinMax(min, max);
+    }
 }
