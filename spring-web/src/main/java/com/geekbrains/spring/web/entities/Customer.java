@@ -1,10 +1,9 @@
-package com.geekbrains.spring.web.data;
+package com.geekbrains.spring.web.entities;
 
 import javax.persistence.*;
-import java.util.List;
 
-@Entity(name = "customer")
-@Table(name = "customers")
+//@Entity(name = "customer")
+//@Table(name = "customers")
 
 public class Customer {
 //    @Id

@@ -1,4 +1,4 @@
-package com.geekbrains.spring.web.data;
+package com.geekbrains.spring.web.entities;
 
 import javax.persistence.*;
 import java.util.List;
@@ -6,19 +6,19 @@ import java.util.List;
 @Entity(name = "product")
 @Table(name = "products")
 public class Product {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Long id;
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @Column(name = "id")
+//    private Long id;
+//
+//    @Column(name = "title")
+//    private String title;
+//
+//    @Column(name = "cost")
+//    private Long cost;
 
-    @Column(name = "title")
-    private String title;
-
-    @Column(name = "cost")
-    private Long cost;
-
-    @OneToMany(mappedBy = "product")
-    private List<Purchase> purchases;
+//    @OneToMany(mappedBy = "product")
+//    private List<Purchase> purchases;
 
     public Product() {
     }

@@ -1,11 +1,10 @@
-package com.geekbrains.spring.web.data;
+package com.geekbrains.spring.web.entities;
 
 import javax.persistence.*;
-import java.util.List;
 
 
-@Entity(name = "purchase")
-@Table(name = "purchases")
+//@Entity(name = "purchase")
+//@Table(name = "purchases")
 public class Purchase {
 //    @Id
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)
