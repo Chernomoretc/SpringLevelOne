@@ -6,16 +6,16 @@ import java.util.List;
 @Entity(name = "product")
 @Table(name = "products")
 public class Product {
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(name = "id")
-//    private Long id;
-//
-//    @Column(name = "title")
-//    private String title;
-//
-//    @Column(name = "cost")
-//    private Long cost;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Long id;
+
+    @Column(name = "title")
+    private String title;
+
+    @Column(name = "cost")
+    private Long cost;
 
 //    @OneToMany(mappedBy = "product")
 //    private List<Purchase> purchases;

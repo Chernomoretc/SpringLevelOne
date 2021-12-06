@@ -10,12 +10,12 @@ import java.util.List;
 @Repository
 public interface ProductRepository extends JpaRepository<Product,Long> {
 
-//    @Query("select p from product p where p.cost > :min")
-//    List<Product> findAllByCostMin( Long min);
-//
-//    @Query("select p from product p where p.cost < :max")
-//    List<Product> findAllByCostMax(Long max);
-//
-//    @Query("select p from product p where p.cost between :min and :max")
-//    List<Product> findAllByCostMinMax(Long min,Long max);
+    @Query("select p from product p where p.cost > :min")
+    List<Product> findAllByCostMin( Long min);
+
+    @Query("select p from product p where p.cost < :max")
+    List<Product> findAllByCostMax(Long max);
+
+    @Query("select p from product p where p.cost between :min and :max")
+    List<Product> findAllByCostMinMax(Long min,Long max);
 }
