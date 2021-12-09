@@ -40,22 +40,10 @@ private ProductService productService;
         productService.changeCost(productId, delta);
     }
 
-    @GetMapping("/products/min_cost")
-    public void filterMin(@RequestParam (defaultValue = "0") Long min)
+    @GetMapping("/products/filter")
+    public List<Product> filterMinMax(@RequestParam (defaultValue = "0") Long min,@RequestParam (defaultValue = "100") Long max)
     {
-      List <Product> p =  productService.findAllByCostMin(min);
-    }
-
-    @GetMapping("/products/max_cost")
-    public void filterMax(@RequestParam (defaultValue = "100") Long max)
-    {
-        List <Product> p =  productService.findAllByCostMax(max);
-    }
-
-    @GetMapping("/products/min_max_cost")
-    public void filterMin(@RequestParam (defaultValue = "0") Long min,@RequestParam (defaultValue = "100") Long max)
-    {
-        List <Product> p =  productService.findAllByCostMinMax(min,max);
+        return productService.findAllByCostMinMax(min,max);
     }
 
 

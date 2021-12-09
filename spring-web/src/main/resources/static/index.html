@@ -15,6 +15,14 @@
 <body>
 
 <div class="container" ng-controller="indexController">
+    <h3>Фильтрация по стоимости</h3>
+    <form novalidate ng-submit="filterMinMax()">
+        <input class="form-control" type="number" placeholder="min" ng-model="filter.min">
+        <p></p>
+        <input class="form-control" type="number" placeholder="max" ng-model="filter.max">
+        <p></p>
+        <button type="submit" class="btn btn-primary">Фильтровать</button>
+    </form>
     <h3>Список продуктов</h3>
     <table class="table table-hover" cellpadding="0" cellspacing="0">
         <tr>
@@ -33,22 +41,14 @@
                 <button class="btn btn-primary" ng-click="changeCost(p.id, p.cost, 1)">+</button>
             </td>
             <td>
-                <button class="btn btn-danger" ng-click="filterMin(p.cost)">Фильтровать</button>
                 <button class="btn btn-danger" ng-click="deleteProduct(p.id)">Удалить</button>
             </td>
-            <p>Фильтрация по минимальной стоимости <input name="min" type="text"  size="1">
-
-
-<!--            <p>Фильтрация по маскимальной стоимости <input name="max" type="number" min="1" max="100" size="1">-->
-<!--                <button class="btn btn-success " ng-click="filterMax(max)" >Фильтровать</button></p>-->
-<!---->
-<!--            <p>Фильтрация от минимальной до маскимальной стоимости <input name="min" type="number" min="1" max="100" size="1">-->
-<!--                                                          <input name="max" type="number" min="1" max="100" size="1">-->
-<!--                <button class="btn btn-success " ng-click="filterMinMax(min,max)">Фильтровать</button></p>-->
         </tr>
 
         </tbody>
     </table>
+
+
 </div>
 </body>
 </html>
