@@ -15,6 +15,23 @@
 <body>
 
 <div class="container" ng-controller="indexController">
+    <h3>Фильтрация по стоимости</h3>
+    <form novalidate ng-submit="loadProducts()">
+        <input class="form-control" type="number" placeholder="min" ng-model="filter.min_cost">
+        <p></p>
+        <input class="form-control" type="number" placeholder="max" ng-model="filter.max_cost">
+        <p></p>
+        <button type="submit" class="btn btn-primary">Фильтровать</button>
+    </form>
+    <h3>Добавить продукт</h3>
+    <form novalidate ng-submit="createProduct()">
+        <input class="form-control" type="text" placeholder="название" ng-model="newProduct.title">
+        <p></p>
+        <input class="form-control" type="number" placeholder="стоимость" ng-model="newProduct.cost">
+        <p></p>
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+    </form>
+    <p></p>
     <h3>Список продуктов</h3>
     <table class="table table-hover" cellpadding="0" cellspacing="0">
         <tr>
@@ -31,6 +48,9 @@
                 <button class="btn btn-primary"  ng-click="changeCost(p.id,p.cost, -1)">-</button>
                 {{p.cost}}
                 <button class="btn btn-primary" ng-click="changeCost(p.id, p.cost, 1)">+</button>
+            </td>
+            <td>
+                <button class="btn btn-danger" ng-click="deleteProduct(p.id)">Удалить</button>
             </td>
         </tr>
 

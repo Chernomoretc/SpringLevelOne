@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2132a2cd-8765-458c-82a9-ef51bd8f854a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/dto/ProductDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/repositories/specifications/ProductsSpecifications.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/repositories/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-web/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-web/src/main/resources/static/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/src/main/resources/static/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

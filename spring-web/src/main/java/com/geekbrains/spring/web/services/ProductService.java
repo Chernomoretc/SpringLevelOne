@@ -1,8 +1,13 @@
 package com.geekbrains.spring.web.services;
 
+import com.geekbrains.spring.web.dto.ProductDto;
 import com.geekbrains.spring.web.entities.Product;
 import com.geekbrains.spring.web.exceptions.ResourceNotFoundException;
 import com.geekbrains.spring.web.repositories.ProductRepository;
+import com.geekbrains.spring.web.repositories.specifications.ProductsSpecifications;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,8 +21,16 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
-    public List<Product> findALL() {
-        return productRepository.findAll();
+    public Page<Product> findALL(Long minCost, Long maxCost, Integer page) {
+        Specification<Product> spec = Specification.where(null);
+        if (minCost != null) {
+            spec = spec.and(ProductsSpecifications.costGreaterOrEqualsThan(minCost));
+        }
+        if (maxCost != null) {
+            spec = spec.and(ProductsSpecifications.costLessThanOrEqualsThan(maxCost));
+        }
+
+        return productRepository.findAll(spec, PageRequest.of(page - 1, 10));
     }
 
 
@@ -26,22 +39,17 @@ public class ProductService {
     }
 
     @Transactional
-    public void changeCost(Long productId, Integer delta) {
+    public void changeCost(Long productId, Long delta) {
         Product product = productRepository.findById(productId)
                 .orElseThrow(() -> new ResourceNotFoundException("Unable to change product's cost. Product not found, id: " + productId));
         product.setCost(product.getCost() + delta);
     }
 
-    public List<Product> findAllByCostMin(Long min) {
-        return productRepository.findAllByCostMin(min);
-
-    }
-
-    public List<Product> findAllByCostMax(Long max) {
-        return productRepository.findAllByCostMax(max);
-    }
-
-    public List<Product> findAllByCostMinMax(Long min, Long max) {
-        return productRepository.findAllByCostMinMax(min, max);
+    public void  addProduct(ProductDto productDto)
+    {
+        Product p = new Product();
+        p.setCost(productDto.getCost());
+        p.setTitle(productDto.getTitle());
+        productRepository.save(p);
     }
 }
