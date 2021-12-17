@@ -32,7 +32,8 @@
         <button type="submit" class="btn btn-primary">Сохранить</button>
     </form>
     <p></p>
-    <h3>Список продуктов</h3>
+
+    <h3>Корзина</h3>
     <table class="table table-hover" cellpadding="0" cellspacing="0">
         <tr>
             <td>ID</td>
@@ -41,21 +42,46 @@
             <td>Действие</td>
         </tr>
         <tbody>
-        <tr ng-repeat="p in ProductsList">
+        <tbody ng-repeat="p in CartList">
             <td>{{p.id}}</td>
             <td>{{p.title}}</td>
+            <td>{{p.cost}}</td>
             <td>
-                <button class="btn btn-primary"  ng-click="changeCost(p.id,p.cost, -1)">-</button>
-                {{p.cost}}
-                <button class="btn btn-primary" ng-click="changeCost(p.id, p.cost, 1)">+</button>
+                <button class="btn btn-danger" ng-click="deleteInCart(p.id)">Удалить</button>
             </td>
-            <td>
-                <button class="btn btn-danger" ng-click="deleteProduct(p.id)">Удалить</button>
-            </td>
-        </tr>
-
-        </tbody>
+    </tbody>
     </table>
+        <p></p>
+
+        <h3>Список продуктов</h3>
+        <table class="table table-hover" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>ID</td>
+                <td>Продукт</td>
+                <td>Стоимость</td>
+                <td>Действие</td>
+            </tr>
+            <tbody>
+            <tr ng-repeat="p in ProductsList">
+                <td>{{p.id}}</td>
+                <td>{{p.title}}</td>
+                <td>
+                    <button class="btn btn-primary" ng-click="changeCost(p.id,p.cost, -1)">-</button>
+                    {{p.cost}}
+                    <button class="btn btn-primary" ng-click="changeCost(p.id, p.cost, 1)">+</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger" ng-click="deleteProduct(p.id)">Удалить</button>
+                </td>
+                <td>
+
+
+                    <button class="btn btn-primary" ng-click="addCart(p)" >Добавить в корзину</button>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
 </div>
 </body>
 </html>
