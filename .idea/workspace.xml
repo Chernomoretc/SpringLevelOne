@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2132a2cd-8765-458c-82a9-ef51bd8f854a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/spring-web/src/main/java/com/geekbrains/spring/web/HomeWork.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
